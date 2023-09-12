@@ -15,6 +15,11 @@ import MobileHeader from './MobileHeader';
 
 import messages from './Header.messages';
 
+import gymSettings from './data/settings';
+const settings = await gymSettings();
+const mainNav = await settings.navigation.main;
+const domain = await settings.astro_url;
+
 ensureConfig([
   'LMS_BASE_URL',
   'LOGOUT_URL',
@@ -33,13 +38,24 @@ subscribe(APP_CONFIG_INITIALIZED, () => {
 const Header = ({ intl }) => {
   const { authenticatedUser, config } = useContext(AppContext);
 
-  const mainMenu = [
-    {
+  const mainMenu = [];
+  
+  mainNav.forEach(item => {
+    mainMenu.push( {
       type: 'item',
-      href: `${config.LMS_BASE_URL}/dashboard`,
-      content: intl.formatMessage(messages['header.links.courses']),
-    },
-  ];
+      href: `${domain}${item.href}`,
+      content: item.title,
+    })
+  });
+
+  // Comment out original mainMenu for Gym
+  // const mainMenu = [
+  //   {
+  //     type: 'item',
+  //     href: `${config.LMS_BASE_URL}/dashboard`,
+  //     content: intl.formatMessage(messages['header.links.courses']),
+  //   },
+  // ];
 
   const orderHistoryItem = {
     type: 'item',
@@ -70,10 +86,11 @@ const Header = ({ intl }) => {
     },
   ];
 
+  // Comment out order history for Gym
   // Users should only see Order History if have a ORDER_HISTORY_URL define in the environment.
-  if (config.ORDER_HISTORY_URL) {
-    userMenu.splice(-1, 0, orderHistoryItem);
-  }
+  // if (config.ORDER_HISTORY_URL) {
+  //   userMenu.splice(-1, 0, orderHistoryItem);
+  // }
 
   const loggedOutItems = [
     {
@@ -91,7 +108,9 @@ const Header = ({ intl }) => {
   const props = {
     logo: config.LOGO_URL,
     logoAltText: config.SITE_NAME,
-    logoDestination: `${config.LMS_BASE_URL}/dashboard`,
+    // Change for Gym
+    // logoDestination: `${config.LMS_BASE_URL}/dashboard`,
+    logoDestination: `${domain}`,
     loggedIn: authenticatedUser !== null,
     username: authenticatedUser !== null ? authenticatedUser.username : null,
     avatar: authenticatedUser !== null ? authenticatedUser.avatar : null,
