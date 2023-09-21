@@ -102,7 +102,7 @@ class MobileHeader extends React.Component {
     return (
       <header
         aria-label={intl.formatMessage(messages['header.label.main.header'])}
-        className={`site-header-mobile d-flex justify-content-between align-items-center shadow ${stickyClassName}`}
+        className={`gym-site-header site-header-mobile d-flex justify-content-between align-items-center shadow ${stickyClassName}`}
       >
         <a className="nav-skip sr-only sr-only-focusable" href="#main">{intl.formatMessage(messages['header.label.skip.nav'])}</a>
         {mainMenu.length > 0 ? (
