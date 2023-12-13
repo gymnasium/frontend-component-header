@@ -1,8 +1,8 @@
 export default async function gymSettings() {
   try {
-    let response = await fetch('https://data.gym.soy/feeds/complete.json');
+    let response = await fetch('https://gym.soy/feeds/config.json');
     let responseJson = await response.json();
-    return responseJson.items.config;
+    return responseJson;
    } catch(error) {
     console.error(error);
   }

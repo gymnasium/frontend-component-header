@@ -18,7 +18,7 @@ import messages from './Header.messages';
 import gymSettings from './data/settings';
 const settings = await gymSettings();
 const mainNav = await settings.navigation.main;
-const domain = await settings.astro_url;
+const domain = await settings.root_url;
 
 ensureConfig([
   'LMS_BASE_URL',
