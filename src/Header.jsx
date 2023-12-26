@@ -15,8 +15,8 @@ import MobileHeader from './MobileHeader';
 
 import messages from './Header.messages';
 
-import gymSettings from './data/settings';
-const settings = await gymSettings();
+import GymSettings from './data/settings';
+const settings = await GymSettings();
 const mainNav = await settings.navigation.main;
 const domain = await settings.root_url;
 
