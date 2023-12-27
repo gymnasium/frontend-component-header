@@ -52,7 +52,7 @@ const GymHeader = ({
 
   return (
     <header className="site-header">
-      <div className="container">
+      <div className="container bg-dark-100">
         <nav className="main" role="navigation" aria-label="Main">
           {headerLogo}
           <div className="wrapper">
@@ -70,16 +70,18 @@ const GymHeader = ({
           </div>
         </nav>
         {secondaryNav && (
-          <nav className="secondary">
-            {secondaryNav === `account` && authenticatedUser && (
-              <AccountNav
-                username={authenticatedUser.username}
-              />
-            )}
-            {secondaryNav === `courses` && (
-              <CoursesNav />
-            )}
-          </nav>
+          <div className="container bg-neutral-900">
+            <nav className="secondary" role="navigation" aria-label="Secondary">
+              {secondaryNav === `account` && authenticatedUser && (
+                <AccountNav
+                  username={authenticatedUser.username}
+                />
+              )}
+              {secondaryNav === `courses` && (
+                <CoursesNav />
+              )}
+            </nav>
+          </div>
         )}
       </div>
       <div className="course-header">
