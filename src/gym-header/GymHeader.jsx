@@ -52,38 +52,36 @@ const GymHeader = ({
 
   return (
     <header className="site-header">
-      <div className="container bg-dark-100">
+      <div className="container">
         <nav className="main" role="navigation" aria-label="Main">
           {headerLogo}
           <div className="wrapper">
-            <ul>
-              <MainMenu />
-            </ul>
-            {showUserDropdown && authenticatedUser && (
+            <MainMenu />
+            {authenticatedUser && (
               <AuthUserMenu
                 username={authenticatedUser.username}
               />
             )}
-            {showUserDropdown && !authenticatedUser && (
+            {!authenticatedUser && (
               <AnonUserMenu />
             )}
           </div>
         </nav>
-        {secondaryNav && (
-          <div className="container bg-neutral-900">
-            <nav className="secondary" role="navigation" aria-label="Secondary">
-              {secondaryNav === `account` && authenticatedUser && (
-                <AccountNav
-                  username={authenticatedUser.username}
-                />
-              )}
-              {secondaryNav === `courses` && (
-                <CoursesNav />
-              )}
-            </nav>
-          </div>
-        )}
       </div>
+      {secondaryNav && (
+        <div className="container">
+          <nav className="secondary" role="navigation" aria-label="Secondary">
+            {secondaryNav === `account` && authenticatedUser && (
+              <AccountNav
+                username={authenticatedUser.username}
+              />
+            )}
+            {secondaryNav === `courses` && (
+              <CoursesNav />
+            )}
+          </nav>
+        </div>
+      )}
       <div className="course-header">
         <div className="container">
           <span className="d-block small m-0">{courseOrg} {courseNumber}</span>
