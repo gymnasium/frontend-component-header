@@ -4,10 +4,10 @@ const settings = await GymSettings();
 
 const CoursesNav = ({ intl }) => {
   return ( 
-    <ul>
-      {settings.navigation.courses.map(item => {
+    <ul role="list">
+      {settings.navigation.courses.map((item, index) => {
         return (
-          <li><a key={`item-${item.title}`} href={item.href}>{item.title}</a></li>
+          <li key={`item-${index}`}><a href={item.href}>{item.title}</a></li>
         );
       })}
     </ul>
