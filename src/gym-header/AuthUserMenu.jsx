@@ -7,7 +7,7 @@ import GymSettings from '../data/settings';
 const settings = await GymSettings();
 
 const AuthUserMenu = ({ intl }) => (
-  <ul class="auth">
+  <ul className="auth">
     <li><a
       href={`${getConfig().LMS_BASE_URL}/dashboard`}
     >

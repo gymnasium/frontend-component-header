@@ -8,7 +8,7 @@ import GymSettings from '../data/settings';
 const settings = await GymSettings();
 
 const AnonUserMenu = ({ intl }) => (
-  <ul class="auth">
+  <ul className="auth">
     <li><a
       href={`${getLoginRedirectUrl(global.location.href)}`}
     >
