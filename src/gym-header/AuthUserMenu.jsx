@@ -8,12 +8,12 @@ const settings = await GymSettings();
 
 const AuthUserMenu = ({ intl }) => (
   <ul className="auth" role="list">
-    <li key="item-1"><a
+    <li key="auth-item-1"><a
       href={`${getConfig().LMS_BASE_URL}/dashboard`}
     >
       {settings.navigation.auth.private[0].title}
     </a></li>
-    <li key="item-2"><a
+    <li key="auth-item-2"><a
       href={getConfig().LOGOUT_URL}
     >
       {settings.navigation.auth.private[1].title}

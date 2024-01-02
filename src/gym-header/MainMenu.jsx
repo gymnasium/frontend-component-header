@@ -7,7 +7,7 @@ const MainMenu = ({ intl }) => {
     <ul role="list">
       {settings.navigation.main.map((item, index) => {
         return (
-          <li key={`item-${index}`}><a href={item.href}>{item.title}</a></li>
+          <li key={`main-item-${index}`}><a href={item.href}>{item.title}</a></li>
         );
       })}
     </ul>

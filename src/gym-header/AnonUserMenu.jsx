@@ -9,12 +9,12 @@ const settings = await GymSettings();
 
 const AnonUserMenu = ({ intl }) => (
   <ul className="auth" role="list">
-    <li key="item-1"><a
+    <li key="unauth-item-1"><a
       href={`${getLoginRedirectUrl(global.location.href)}`}
     >
       {settings.navigation.auth.public[0].title}
     </a></li>
-    <li key="item-2"><a className={settings.navigation.auth.public[1].type}
+    <li key="unauth-item-2"><a className={settings.navigation.auth.public[1].type}
       href={`${getConfig().LMS_BASE_URL}/register?next=${encodeURIComponent(global.location.href)}`}
     >
       {settings.navigation.auth.public[1].title}
