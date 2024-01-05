@@ -42,8 +42,8 @@ const GymHeader = ({
     <LinkedLogo
       className="logo"
       href={`${getConfig().MARKETING_SITE_BASE_URL}`}
-      src={`${settings.cms_url}${settings.logos.main.white.src}`}
-      srcSet={`${settings.cms_url}${settings.logos.main.white.srcset}`}
+      src={`${settings.urls.cms}${settings.logos.main.white.src}`}
+      srcSet={`${settings.urls.cms}${settings.logos.main.white.srcset}`}
       alt={getConfig().SITE_NAME}
     />
   );
