@@ -1,6 +1,6 @@
 {
   "name": "@edx/frontend-component-header",
-  "version": "gym.palm.4",
+  "version": "1.0.0-gym.palm.4",
   "description": "The standard header for Open edX",
   "main": "dist/index.js",
   "publishConfig": {
