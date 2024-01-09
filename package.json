@@ -1,6 +1,6 @@
 {
   "name": "@edx/frontend-component-header",
-  "version": "1.0.0-semantically-released",
+  "version": "gym.palm.4",
   "description": "The standard header for Open edX",
   "main": "dist/index.js",
   "publishConfig": {
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openedx/frontend-component-header.git"
+    "url": "git+https://github.com/gymnasium/frontend-component-header.git"
   },
   "author": "edX",
   "license": "AGPL-3.0",
