@@ -34,8 +34,8 @@
   "homepage": "https://github.com/openedx/frontend-component-header#readme",
   "devDependencies": {
     "@openedx/brand-openedx": "github:gymnasium/brand-openedx#gym.palm.4",
-    "@edx/browserslist-config": "^1.1.1",
-    "@edx/frontend-build": "12.9.17",
+    "@edx/browserslist-config": "1.2.0",
+    "@edx/frontend-build": "npm:@openedx/frontend-build@13.0.24",
     "@edx/frontend-platform": "4.2.0",
     "@edx/reactifex": "^2.1.1",
     "@testing-library/dom": "9.2.0",
@@ -56,7 +56,7 @@
     "redux-saga": "1.2.3"
   },
   "dependencies": {
-    "@edx/paragon": "20.30.1",
+    "@edx/paragon": "20.46.3",
     "@fortawesome/fontawesome-svg-core": "6.3.0",
     "@fortawesome/free-brands-svg-icons": "6.3.0",
     "@fortawesome/free-regular-svg-icons": "6.3.0",
