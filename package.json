@@ -35,7 +35,7 @@
   "devDependencies": {
     "@openedx/brand-openedx": "github:gymnasium/brand-openedx#gym.palm.4",
     "@edx/browserslist-config": "1.2.0",
-    "@edx/frontend-build": "npm:@openedx/frontend-build@13.0.24",
+    "@edx/frontend-build": "npm:@edx/frontend-build@12.8.67",
     "@edx/frontend-platform": "4.2.0",
     "@edx/reactifex": "^2.1.1",
     "@testing-library/dom": "9.2.0",
