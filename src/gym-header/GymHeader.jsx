@@ -48,10 +48,8 @@ const GymHeader = ({
     />
   );
 
-
-
   return (
-    <header className="site-header">
+    <header className="site-header gym-header">
       <div className="container">
         <nav className="main" role="navigation" aria-label="Main">
           {headerLogo}

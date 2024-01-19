@@ -1,3 +1,4 @@
+import React from 'react';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import GymSettings from '../data/settings';
 const settings = await GymSettings();
